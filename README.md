@@ -77,3 +77,6 @@ docker rm $(docker ps -a -q)
 
 ### 4.- Crear mi propia imagen
 
+```bash
+docker build -t siorellana/cats:200 .
+```
