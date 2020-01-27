@@ -6,6 +6,7 @@ LA estructura de directorios es la siguiente:
 ```output
 .
 ├── Makefile        -> Archivo para "automatizar"
+├── Dockerfile      -> Archivo con definición de imagen
 ├── README.md       -> Archivo que lees actualmente
 └── my-website      -> Directorio de aplicación
     └── index.html  -> Aplicacion
@@ -47,25 +48,25 @@ Tambien se puede utilizar el archivo dentro del directorio my-website.
 
 El siguiente comando para ejecutar un contenedor de docker, montando como volumen el directorio my_app y exponiendo el contenedor con el puerto 9191 apuntando al puerto 80 del contenedor.
 
-```bash
+```docker
 docker run --name my-website -v $PWD/my_app:/usr/share/nginx/html:ro -d -p 9191:80 nginx
 ```
 
 Detener un contenedor
 
-```bash
+```docker
 docker stop ≤Nombre Contenedor>
 ````
 
 Detener todos los contenedores
 
-```bash
+```docker
 docker stop $(docker ps -a -q)
 ````
 
 Eliminar un contenedor
 
-```bash
+```docker
 docker rm ≤Nombre Contenedor>
 ```
 
