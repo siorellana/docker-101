@@ -1,13 +1,31 @@
-# Prerequisitos
+# DOCKER 101
+
+En este repositorio se revisarán algunos ejercicios de Docker.
+LA estructura de directorios es la siguiente:
+
+```output
+.
+├── Makefile        -> Archivo para "automatizar"
+├── README.md       -> Archivo que lees actualmente
+└── my-website      -> Directorio de aplicación
+    └── index.html  -> Aplicacion
+```
+
+## Prerequisitos
 
 Docker instalado
+
 Git instalado
 
-## 1.- Clonar el repositorio
+### 1.- Clonar el repositorio
 
-Ejecutar el comando git clone
+Ejecutar el siguiente comando para clonar repositorio:
 
-## 2.- Crear una aplicación web
+```bash
+git clone https://github.com/siorellana/docker-101.git
+```
+
+### 2.- Crear una aplicación web
 
 Generar un archivo un archivo llamado index.html con el siguiente contenido:
 
