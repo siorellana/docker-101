@@ -41,12 +41,39 @@ Generar un archivo un archivo llamado index.html con el siguiente contenido:
 </html>
 ```
 
-2.- Ejecutar la aplicación web con docker
+Tambien se puede utilizar el archivo dentro del directorio my-website.
 
-El siguiente comando para ejecutar el 
+### 3.- Ejecutar la aplicación web con docker
+
+El siguiente comando para ejecutar un contenedor de docker, montando como volumen el directorio my_app y exponiendo el contenedor con el puerto 9191 apuntando al puerto 80 del contenedor.
 
 ```bash
-docker run --name some-nginx -v /some/content:/usr/share/nginx/html:ro -d nginx
+docker run --name my-website -v $PWD/my_app:/usr/share/nginx/html:ro -d -p 9191:80 nginx
 ```
 
-3.- 
+Detener un contenedor
+
+```bash
+docker stop ≤Nombre Contenedor>
+````
+
+Detener todos los contenedores
+
+```bash
+docker stop $(docker ps -a -q)
+````
+
+Eliminar un contenedor
+
+```bash
+docker rm ≤Nombre Contenedor>
+```
+
+Eliminar todos los contenedores
+
+```bash
+docker rm $(docker ps -a -q)
+```
+
+### 4.- Crear mi propia imagen
+
